@@ -9,16 +9,21 @@ import {
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Main from './pages/Main/Main';
+import Navbar from './pages/Navbar/Navbar';
+import Info from './pages/Info/Info';
 
 function App() {
   return (
 
-    <div style={{ height: '100vh' }} className='d-flex align-items-center justify-content-center h-full'>
+    <div style={{ height: '100vh' }} className=' h-full'>
       <BrowserRouter>
-
+        <Navbar></Navbar>
         <Switch>
           <Route path='/home'>
             <Home></Home>
+          </Route>
+          <Route path='/info'>
+            <Info></Info>
           </Route>
           <Route path='/login'>
             <Login></Login>

@@ -15,8 +15,8 @@ const Register = () => {
 
     return (
         <div style={{ height: '100vh', width: '100vw' }} className='bg-dark text-light d-flex flex-column align-items-center justify-content-center'>
-            <h1 className='my-2'>Register Here </h1>
-            <form className='bg-light text-dark d-flex flex-column align-items-center justify-content-center w-50 h-75' onSubmit={handleSubmit(onSubmit)}>
+            <h1 className='my-2 fs-2'>REGISTER HERE </h1>
+            <form className=' text-dark d-flex flex-column align-items-center justify-content-center w-50 h-75' onSubmit={handleSubmit(onSubmit)}>
                 <input required className='p-2 w-50 rounded' placeholder='Name' type='text' {...register("name")} /> <br />
                 <input required className='p-2 w-50 rounded' placeholder='Email' type='email' {...register("email")} /> <br />
                 <input required className='p-2 w-50 rounded' placeholder='Password' type='password' {...register("password")} /> <br />
@@ -28,13 +28,15 @@ const Register = () => {
                     <option value="other">Self Employed</option>
                     <option value="other">Others</option>
                 </select>
-                <input className='w-25 fw-bold bg-gray border-0 my-3 py-2' type="submit" value='Register' />
+                <input className='w-25 btn btn-primary fw-bold bg-gray border-0 mt-4 py-2' type="submit" value='Register' />
             </form>
             <p>Already Registered ?
 
-                <Link to='/login'>
-                    Login Here
-                </Link>
+                <span className='ms-2'>
+                    <Link to='/login'>
+                        Login Here
+                    </Link>
+                </span>
             </p>
         </div>
     );
