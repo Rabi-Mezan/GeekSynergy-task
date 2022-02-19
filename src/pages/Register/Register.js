@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
+import swal from 'sweetalert';
 
 const Register = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
@@ -8,6 +9,7 @@ const Register = () => {
         localStorage.setItem("Name", JSON.stringify(data.name));
         localStorage.setItem("Password", JSON.stringify(data.password));
         console.log("Saved in Local Storage");
+        swal("Good job!", "Registration Successfull!", "success");
     }
 
 

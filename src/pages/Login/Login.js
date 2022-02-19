@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import swal from 'sweetalert';
 
 
 const Login = () => {
@@ -18,7 +19,7 @@ const Login = () => {
         }
         else {
             console.log(errors);
-            alert('Invalid Credentials')
+            swal("Oops", "Invalid Credentials!", "error")
         }
     }
     return (
